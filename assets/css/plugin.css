@@ -1,0 +1,114 @@
+/* Général */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+/* Layout générale*/
+
+.background {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "firstbouton sdbouton";
+    position: fixed;
+    z-index: 20;
+    
+}
+
+.devis {
+    grid-area: firstbouton;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.phone {
+    grid-area: sdbouton;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Taille */
+
+.background {
+    width: 100vw;
+}
+
+/* Couleurs */
+.background {
+    background-color: #05ACDA;
+}
+
+.lienimg {
+    text-decoration: none;
+    color: #FFFF;
+}
+
+.lienp {
+    text-decoration: none;
+    color: #FFFF;
+}
+
+/* DESKTOP */
+@media (min-width: 768px) {
+
+    /* Taille */
+    .background {
+        padding-top: 1vw;
+        padding-bottom: 1vw;
+    }
+    .icone {
+        width: 4vh;
+        margin-right: 1vw;
+    }
+    .paragraph {
+        font-size: 1.5em;
+    }
+}
+
+/* TABLETTE */
+@media (max-width: 768px) {
+        
+    /* Taille */
+    .background {
+        padding-top: 1vw;
+        padding-bottom: 1vw;
+    }
+    .icone {
+        width: 3vh;
+        margin-right: 1vw;
+    }
+    .paragraph {
+        font-size: 1em;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 400px) {
+        
+    /* Taille */
+    .background {
+        padding-top: 4vw;
+        padding-bottom: 4vw;
+    }
+    .icone {
+        width: 3vh;
+        margin-right: 2vw;
+    }
+    .paragraph {
+        font-size: 1.2em;
+    }
+}
